@@ -3,9 +3,9 @@ CREATE TABLE "passangers" (
 	nama_depan	VARCHAR(20),
 	nama_belakang	VARCHAR(20),
 	riwayat_penyakit VARCHAR(30), 
-  umur INT, 
-  departure CHAR, 
-  arrival CHAR
+	umur INT, 
+	departure CHAR, 
+	arrival CHAR
 );
 
 INSERT INTO passangers
