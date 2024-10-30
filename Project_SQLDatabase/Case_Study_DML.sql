@@ -1,5 +1,5 @@
 -- Building a table for Study_Case#2
-CREATE TABLE "passangers" (
+CREATE TABLE passangers (
 	nama_depan	VARCHAR(20),
 	nama_belakang	VARCHAR(20),
 	riwayat_penyakit VARCHAR(30), 
