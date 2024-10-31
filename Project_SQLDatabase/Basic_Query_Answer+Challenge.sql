@@ -11,6 +11,7 @@
 
 -- Adding Data to shinkansen_station table
 
+-- Challenge 1
 -- INSERT INTO shinkansen_station 
 -- 	VALUES ('Tokyo', 'Tokaido_Shinkansen', 1964, 'Tokyo', 0, 'JR_Central'),
 -- 	('Shinagawa', 'Tokaido_Shinkansen', 2003, 'Tokyo', 6.8, 'JR_Central'),
@@ -133,7 +134,8 @@
 -- Showing data from station_name column 
 -- SELECT station_name 
 -- FROM shinkansen_station;
-	
+
+-- Challenge 2
 -- Showing station_name data (Uniquely)
 -- SELECT DISTINCT station_name 
 -- FROM shinkansen_station;
@@ -149,7 +151,7 @@
 -- prefecture = Shizuoka
 -- company = JR_Central
 
--- Challenge 1
+-- Challenge 3
 -- Search a train station located 293.6 miles away from Tokyo station
 -- SELECT *
 -- FROM shinkansen_station
@@ -162,7 +164,7 @@
 -- WHERE prefecture = 'Kanagawa';
 -- Result = Shin-Yokohama dan Odawara
 
--- Challenge 2
+-- Challenge 4
 -- Looking for detailed information about Atami train station
 -- SELECT *
 -- FROM shinkansen_station
@@ -194,7 +196,7 @@
 -- WHERE NOT year = 1964;
 -- There were 101 stations not built in 1964.
 
--- Challenge 3
+-- Challenge 5
 -- Looking for detailed information about station that built in 1988 and located in Shizuoka prefecture.
 -- SELECT * 
 -- FROM shinkansen_station
@@ -202,7 +204,7 @@
 -- AND prefecture = 'Shizuoka';
 -- Result = Shin-Fuji, Kakegawa
 
--- Challenge 4
+-- Challenge 6
 -- Looking for detailed information about station located in Shizuoka or Kanagawa prefecture.
 -- SELECT * 
 -- FROM shinkansen_station
@@ -210,7 +212,7 @@
 -- OR prefecture = 'Kanagawa';
 -- There's 8 stations
 
--- Challenge 5
+-- Challenge 7
 -- Find a station not build in 1988 and JR_Central and distance less than 300.
 -- SELECT * 
 -- FROM shinkansen_station
@@ -223,9 +225,63 @@
 -- FROM shinkansen_station
 -- WHERE prefecture like 't%';
 
--- Challenge 6
+-- Challenge 8
 -- Returns information about stations located in Shizuoka prefecture and > 200 km from Tokyo station.
 -- SELECT *
 -- FROM shinkansen_station
 -- WHERE prefecture like 's%ka'
 -- AND distance_fr_tokyo_st > 200;
+
+-- SELECT DISTINCT prefecture AS wilayah
+-- FROM shinkansen_station;
+
+-- Challenge 9 
+-- Make an alias for column header with easier to understand language
+-- SELECT station_name AS nama_stasiun, year AS tahun, distance_fr_tokyo_st AS jarak_dari_tokyo
+-- FROM shinkansen_station;
+
+-- Challenge 10
+-- Change station name from Atami to Bandung
+-- UPDATE shinkansen_station
+-- SET station_name = 'Bandung'
+-- WHERE station_name = 'Atami';
+
+-- Challenge 11
+-- Sorting prefecture name from Z to A
+-- SELECT DISTINCT prefecture
+-- FROM shinkansen_station
+-- ORDER BY prefecture DESC;
+
+-- Only want 5 lines displayed
+-- SELECT *
+-- FROM shinkansen_station
+-- LIMIT 5;
+
+-- Challenge 12
+-- Only want 7 lines displayed
+-- SELECT *
+-- FROM shinkansen_station
+-- LIMIT 7;
+
+-- Only want 5 lines displayed, skip a line in beginning.
+-- SELECT *
+-- FROM shinkansen_station
+-- LIMIT 5
+-- OFFSET 1;
+
+-- Challenge 13
+-- Only want 7 lines displayed, skip 3 line in beginning.
+-- SELECT *
+-- FROM shinkansen_station
+-- LIMIT 7
+-- OFFSET 3;
+
+-- Remove Aichi prefecture and related data to it
+-- DELETE 
+-- FROM shinkansen_station
+-- WHERE prefecture = 'Aichi';
+
+-- Challenge 14
+-- Erase all data
+-- DELETE
+-- FROM shinkansen_station
