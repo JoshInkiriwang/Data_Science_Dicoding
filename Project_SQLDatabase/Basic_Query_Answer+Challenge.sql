@@ -218,3 +218,14 @@
 -- AND company = 'JR_Central'
 -- AND NOT YEAR = 1988;
 
+-- Return result about station located in prefecture starts with t
+-- SELECT *
+-- FROM shinkansen_station
+-- WHERE prefecture like 't%';
+
+-- Challenge 6
+-- Returns information about stations located in Shizuoka prefecture and > 200 km from Tokyo station.
+-- SELECT *
+-- FROM shinkansen_station
+-- WHERE prefecture like 's%ka'
+-- AND distance_fr_tokyo_st > 200;
